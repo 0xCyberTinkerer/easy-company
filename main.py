@@ -2,9 +2,9 @@ from pymem import *
 from pymem.process import *
 from graph import janela
 
-pm = pymem.Pymem("Lethal Company.exe")
+pm = pymem.Pymem("#####.exe")
 
-gameModule = module_from_name(pm.process_handle, "UnityPlayer.dll").lpBaseOfDll
+gameModule = module_from_name(pm.process_handle, "#####.dll").lpBaseOfDll
 
 def GetPtrAddr(base, offsets):
     addr = pm.read_longlong(base)
